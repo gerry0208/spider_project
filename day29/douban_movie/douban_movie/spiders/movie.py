@@ -19,7 +19,6 @@ class MovieSpider(CrawlSpider):
             LinkExtractor(
                 restrict_xpaths='//*[@id="content"]/div/div[1]/div[2]/span[3]/a'
             ),
-            callback="parse_item",
             follow=True,
         ),
     )
@@ -29,10 +28,6 @@ class MovieSpider(CrawlSpider):
         img_urls = response.xpath('//a[@class="nbgnbg"]/img/@src').getall()
         item["image_urls"] = img_urls
         img_names = response.xpath('//span[@property="v:itemreviewed"]/text()').get()
-        try:
-            img_names = img_names.replace(":", "：")
-        except:
-            pass
-        else:
-            item["image_names"] = img_names
-            return item
+        img_names = img_names.replace(":", "：")
+        item["image_names"] = img_names
+        return item

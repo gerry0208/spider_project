@@ -42,7 +42,7 @@ CONCURRENT_REQUESTS = 3
 #    "Accept-Language": "en",
 # }
 
-# Enable or disable spider middlewares
+# Enable or disable 爬虫项目 middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 # SPIDER_MIDDLEWARES = {
 #    "douban_movie.middlewares.DoubanMovieSpiderMiddleware": 543,

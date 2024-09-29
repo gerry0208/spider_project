@@ -11,7 +11,7 @@ from scrapy.pipelines.images import ImagesPipeline
 
 
 # class DoubanMoviePipeline:
-#     def process_item(self, item, spider):
+#     def process_item(self, item, 爬虫项目):
 #         return item
 
 
